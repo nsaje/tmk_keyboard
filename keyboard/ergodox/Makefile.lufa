@@ -137,4 +137,7 @@ micro: all
 cub: OPT_DEFS += -DKEYMAP_CUB
 cub: all
 
+nsaje: OPT_DEFS += -DKEYMAP_NSAJE
+nsaje: all
+
 
