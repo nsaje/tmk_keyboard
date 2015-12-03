@@ -2,23 +2,23 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(
         // Left Hand
-        ESC, 1,   2,   3,   4,   5,   6,
+        GRV, 1,   2,   3,   4,   5,   6,
         TAB, Q,   W,   E,   R,   T,   LBRC,
         LCTL,A,   S,   D,   F,   G,
-        LSFT,Z,   X,   C,   V,   B,   NO,
-        BSLS,GRV, LALT,FN1, LGUI,
+        LSFT,Z,   X,   C,   V,   B,   ESC,
+        NO,NO, LALT,FN1, LGUI,
                                       LCTL,LALT,
                                            HOME,
                                   LSFT,BSPC, END,
         // Right Hand
-            7,   8,   9,   0,   MINS,   EQL, BSPC,
-            RBRC, Y,   U,   I,   O,   P,   BSLS,
+            NO,   7,   8,   9,   0,   MINS,   BSPC,
+            RBRC, Y,   U,   I,   O,   P,   EQL,
                   H,   J,   K,   L,   SCLN,   ENT,
-            QUOT,  N,   M,   COMM,DOT, SLSH,   RSFT,
-                       SPC,DOWN, UP, RGHT,   RGUI,
+            QUOT,  N,   M,   COMM,DOT, SLSH,   BSLS,
+                       SPC,NO, UP, RGHT,   RGUI,
         RALT, RCTL,
         PGUP,
-        PGDN, NO, ENT
+        PGDN, NO,ESC
     ),
 
     KEYMAP(  // Layer2: transparent on edges + hard-defined thumb keys, all others are empty
