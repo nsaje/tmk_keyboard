@@ -15,17 +15,39 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             RBRC, Y,   U,   I,   O,   P,   EQL,
                   H,   J,   K,   L,   SCLN,   ENT,
             QUOT,  N,   M,   COMM,DOT, SLSH,   BSLS,
-                       SPC,NO, UP, RGHT,   RGUI,
+                       SPC,FN2, UP, RGHT,   RGUI,
         RALT, RCTL,
         PGUP,
         PGDN, NO,ESC
+    ),
+
+// qwerty with staggered bottom row
+    KEYMAP( // Layer 1
+        // Left Hand
+        TRNS, 1,   2,   3,   4,   5,   6,
+        TRNS, Q,   W,   E,   R,   T,   LBRC,
+        TRNS,A,   S,   D,   F,   G,
+        TRNS,LSFT, Z,  X,   C,   V,   B,
+        TRNS,TRNS, TRNS,TRNS, TRNS,
+                                      TRNS,TRNS,
+                                           TRNS,
+                                  TRNS,TRNS, TRNS,
+        // Right Hand
+            NO, 7,   8,   9,   0,   MINS,  BSPC,
+            RBRC, Y,   U,   I,   O,   P,   EQL,
+                  H,   J,   K,   L,   SCLN,   ENT,
+            QUOT,  B,  N,   M,   COMM,DOT, SLSH,
+                       TRNS,TRNS, TRNS, TRNS,   BSLS,
+        TRNS, TRNS,
+        TRNS,
+        TRNS, TRNS,TRNS
     ),
 
     KEYMAP(  // Layer2: transparent on edges + hard-defined thumb keys, all others are empty
         // left hand
         FN0,NO,  NO,  NO,  NO,  NO,  NO,
         TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,NO,  NO,  NO,  NO,  NO,
+        TRNS,NO,  NO,  E,  NO,  NO,
         TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
@@ -33,7 +55,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   TRNS,TRNS, TRNS,
         // right hand
              NO,  NO,  NO,  NO,  NO,  NO,  TRNS,
-             TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
+             TRNS,NO,  U,  NO,  NO,  NO,  TRNS,
                   LEFT,  DOWN,  UP,  RGHT,  TRNS, TRNS,
              TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
                        TRNS,TRNS, TRNS, TRNS,   TRNS,
@@ -97,7 +119,8 @@ enum function_id {
 // https://github.com/jcheng31/tmk_keyboard/blob/colemak/keyboard/ergodox/keymap_colemak.h
 static const uint16_t PROGMEM fn_actions[] = {
     ACTION_FUNCTION(TEENSY_KEY), // Teensy
-    ACTION_LAYER_MOMENTARY(1), // Hold for Programming Layer
+    ACTION_LAYER_MOMENTARY(2), // Hold for Programming Layer
+    ACTION_LAYER_INVERT(1, ON_PRESS), // Push to enable/disable staggered qwerty layer
 };
 
 void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
