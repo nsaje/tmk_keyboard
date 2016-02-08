@@ -6,19 +6,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, Q,   W,   E,   R,   T,   LBRC,
         LCTL,A,   S,   D,   F,   G,
         LSFT,Z,   X,   C,   V,   B,   ESC,
-        NO,NO, LALT,FN1, LGUI,
+        LCTL,NO, LALT,FN1, LGUI,
                                       LCTL,LALT,
                                            HOME,
-                                  LSFT,BSPC, END,
+                                  BSPC,ESC, END,
         // Right Hand
-            NO,   7,   8,   9,   0,   MINS,   BSPC,
-            RBRC, Y,   U,   I,   O,   P,   EQL,
-                  H,   J,   K,   L,   SCLN,   ENT,
-            QUOT,  N,   M,   COMM,DOT, SLSH,   BSLS,
-                       SPC,FN2, UP, RGHT,   RGUI,
+            NO,   7,   8,   9,   0,   MINS,   EQL,
+            RBRC, Y,   U,   I,   O,   P,   LBRC,
+                  H,   J,   K,   L,   SCLN,   QUOT,
+            QUOT,  N,   M,   COMM,DOT, SLSH,   RSFT,
+                       FN1,FN2, UP, RGHT,   BSLS,
         RALT, RCTL,
         PGUP,
-        PGDN, NO,ESC
+        PGDN, ENT,SPC
     ),
 
 // qwerty with staggered bottom row
@@ -33,11 +33,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            TRNS,
                                   TRNS,TRNS, TRNS,
         // Right Hand
-            NO, 7,   8,   9,   0,   MINS,  BSPC,
-            RBRC, Y,   U,   I,   O,   P,   EQL,
-                  H,   J,   K,   L,   SCLN,   ENT,
-            QUOT,  B,  N,   M,   COMM,DOT, SLSH,
-                       TRNS,TRNS, TRNS, TRNS,   BSLS,
+            NO, 7,   8,   9,   0,   MINS,  EQL,
+            RBRC, Y,   U,   I,   O,   P,   TRNS,
+                  H,   J,   K,   L,   SCLN,   TRNS,
+            QUOT,  N,   M,   COMM,DOT,  TRNS, TRNS,
+                       TRNS,TRNS, TRNS, TRNS,   TRNS,
         TRNS, TRNS,
         TRNS,
         TRNS, TRNS,TRNS
