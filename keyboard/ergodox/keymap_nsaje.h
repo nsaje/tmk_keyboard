@@ -6,19 +6,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, Q,   W,   E,   R,   T,   LBRC,
         LCTL,A,   S,   D,   F,   G,
         LSFT,Z,   X,   C,   V,   B,   ESC,
-        LCTL,NO, LALT,FN1, LGUI,
-                                      LCTL,LALT,
-                                           HOME,
-                                  BSPC,ESC, END,
+        LCTL,NO, NO,LGUI,LALT,
+                                      DEL,LALT,
+                                           PGUP,
+                                  BSPC,ESC, PGDN,
         // Right Hand
             NO,   7,   8,   9,   0,   MINS,   EQL,
             RBRC, Y,   U,   I,   O,   P,   LBRC,
                   H,   J,   K,   L,   SCLN,   QUOT,
             QUOT,  N,   M,   COMM,DOT, SLSH,   RSFT,
-                       FN1,FN2, UP, RGHT,   BSLS,
+                       FN1,RCTL, FN2, RGHT,   BSLS,
         RALT, RCTL,
-        PGUP,
-        PGDN, ENT,SPC
+        HOME,
+        END, ENT,SPC
     ),
 
 // qwerty with staggered bottom row
